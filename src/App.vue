@@ -1,6 +1,9 @@
 <template>
   <div>
     <div id="content">
+      <router-view></router-view>
+      <router-link to="/home">首页</router-link>
+      <input type="text">
       <div id="main"></div>
       <div id="maychar"></div>
     </div>
@@ -17,6 +20,7 @@ import _get from "lodash/get";
 import _uniq from 'lodash/uniq'
 import _pick from 'lodash/pick'
 export default {
+  name:"App",
   data() {
     return {};
   },
@@ -106,7 +110,7 @@ export default {
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
       //title，随意设置，也可以提出来做参数，传入进来，自己发挥
-      var title = "测试啊"; // 导出名字
+      var title = "测试导出名称"; // 导出名字
       var that = this;
       var shareContent = DomName; //需要截图的包裹的（原生的）DOM 对象
       //打印看有没有获取到dom
